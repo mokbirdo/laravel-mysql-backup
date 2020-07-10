@@ -1,10 +1,10 @@
 <?php
 
-namespace Vendor\Package;
+namespace Mokbirdo\LaravelMysqlBackup;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
-class ServiceProvider extends LaravelServiceProvider
+class LaravelMysqlBackup extends LaravelServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
