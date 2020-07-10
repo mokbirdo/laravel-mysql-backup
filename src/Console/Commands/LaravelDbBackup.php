@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Mokbirdo\LaravelMysqlBackup\Console\Commands;
 
 use Ifsnop\Mysqldump\Mysqldump;
 use Illuminate\Console\Command;
@@ -20,7 +20,7 @@ class LaravelDbBackup extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Make Mysql Backup';
 
     /**
      * Create a new command instance.
