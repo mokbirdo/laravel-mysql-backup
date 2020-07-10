@@ -46,7 +46,9 @@ class ServiceProvider extends LaravelServiceProvider
     public function register()
     {
         // Bind any implementations.
-        $this->commands([LaravelDbBackup::class]);
+        $this->commands([
+            LaravelDbBackup::class
+        ]);
     }
 
     /**
@@ -63,30 +65,13 @@ class ServiceProvider extends LaravelServiceProvider
     {
         $configPath = __DIR__ . '/../config/packagename.php';
 
-        $this->publishes([$configPath => config_path('packagename.php')]);
-
-        $this->mergeConfigFrom($configPath, 'packagename');
+//        $this->publishes([$configPath => config_path('packagename.php')]);
+//
+//        $this->mergeConfigFrom($configPath, 'packagename');
     }
 
     private function handleTranslations()
     {
         $this->loadTranslationsFrom(__DIR__ . '/../lang', 'packagename');
-    }
-
-    private function handleViews()
-    {
-        $this->loadViewsFrom(__DIR__ . '/../views', 'packagename');
-
-        $this->publishes([__DIR__ . '/../views' => base_path('resources/views/vendor/packagename')]);
-    }
-
-    private function handleMigrations()
-    {
-        $this->publishes([__DIR__ . '/../migrations' => base_path('database/migrations')]);
-    }
-
-    private function handleRoutes()
-    {
-        include __DIR__ . '/../routes/routes.php';
     }
 }
