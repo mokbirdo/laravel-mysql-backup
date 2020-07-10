@@ -5,7 +5,7 @@ namespace Mokbirdo\LaravelMysqlBackup;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 use Mokbirdo\LaravelMysqlBackup\Console\Commands\LaravelDbBackup;
 
-class LaravelMysqlBackup extends LaravelServiceProvider
+class ServiceProvider extends LaravelServiceProvider
 {
     public function __construct($app)
     {
