@@ -56,7 +56,7 @@ class LaravelDbBackup extends Command
             $db_user = $db_conf['username'];
             $db_pass = $db_conf['password'];
             $dump = new Mysqldump(
-                'mysql:host=' . $db_conf['host'] . ';dbname=' . $db_name,
+                'mysql:host=' . $db_conf['host'] . ':' . $db_conf['port'] . ';dbname=' . $db_name,
                 $db_user,
                 $db_pass,
                 [
